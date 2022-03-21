@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masai Calculator</title>
+    <style>
+      h1 {
+        text-align: center;
+        font-size: 60px;
+        color: teal;
+      }
+      #calculator{
+          height: 500px;
+          width: 400px;
+          /* border: 1px solid black; */
+          margin: auto;
+          margin-top: 80px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          border-radius: 10px;
+          padding: 40px;
+      }
+      #display{
+          height: 15%;
+          width: 90%;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          margin: auto;
+      }
+      #keyboard{
+        /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+        width: 90%;
+        margin: auto;
+        /* border: 1px solid; */
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(4,80px);
+        gap: 10px;
+        margin-top: 20px;
+        display: grid;
+      }
+      #keyboard>div{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 50px;
+        align-items: center;
+        justify-content: center;
+        display: grid;
+        font-size: 25px;
+        font-weight: bold;
+        /* border: 1px solid black; */
+      }
+      #keyboard > div:hover {
+        background-color: teal;
+        cursor: pointer;
+        color: white;
+      }
+      .black{
+        background-color: black;
+        color: white;
+      }
+      #c{
+        background-color: red;
+        color: white;
+      }
+      #display{
+          font-size: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      /* use grid to acheive the layout */
+    </style>
+  </head>
+  <body>
+    <h1>Masai Calculator</h1>
+    <div id="calculator">
+      <div id="display"></div>
+      <div id="keyboard">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div class="black">+</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+          <div class="black">-</div>
+          <div>7</div>
+          <div>8</div>
+          <div>9</div>
+          <div class="black">*</div>
+          <div id="c">c</div>
+          <div>0</div>
+          <div class="black">=</div>
+          <div class="black">/</div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+    var nums=document.querySelectorAll("#keyboard>div");
+    var display=document.querySelector("#display")
+    // console.log(nums)
+    for(i=0;i<nums.length;i++){
+        nums[i].addEventListener("click",mycalculator)
+    }
+
+    function mycalculator(){
+        // console.log("click on any button")
+        // console.log(event.target.innerText)
+        var targetnumber=event.target.innerText
+        console.log(targetnumber)
+        switch(targetnumber){
+            case "c":
+                display.innerText=""
+                break;
+            case "=":
+                display.innerText=eval(display.innerText)
+                break;
+            
+            default:
+            display.innerText+=targetnumber;
+        }
+    }
+
+
+</script>

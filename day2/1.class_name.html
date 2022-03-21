@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head1">i am heading</h1>
+    <p class="para">i am para</p>
+
+    <div class="para">i am div</div>
+    <h3 class="para">i am h3</h3>
+    
+    <p class="new_para">
+        <span>i am para 2</span>
+    </p>
+</body>
+</html>
+
+<script>
+
+    console.log(document.getElementById("head1"))
+    console.log(document.getElementsByClassName("para"))
+
+    x=document.getElementsByClassName("para")
+
+    console.log(x[0].innerText)
+
+
+    for(i=0;i<x.length;i++){
+        console.log(x[i].innerText)
+    }
+
+
+
+    console.log(document.getElementsByClassName("new_para")[0].innerText)
+</script>

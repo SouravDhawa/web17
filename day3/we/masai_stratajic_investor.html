@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            gap: 20px;
+            
+        }
+        #container>div{
+            /* border:  1px solid black; */
+            margin: auto;
+            text-align: center;
+            
+        }
+        #com{
+            height: 150px;
+            width: 150px;
+            margin-top: -70px;
+        }
+        #p{
+            color: gray;
+        }
+        #img{
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+</body>
+</html>
+
+<script>
+var investor=[
+    {name: "Vijay Shekhar Sharma", image: "https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",profasion:"Founder & CEO", companylogo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"},
+    {name: "Kunal Shah", image: "https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png",profasion:"Founder & CEO", companylogo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"},
+    {name: "Amrish Rau", image: "https://masai-website-images.s3.ap-south-1.amazonaws.com/amrish_rau_pine_labs_144e5e587c.jpg",profasion:"Founder & CEO", companylogo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"},
+    {name: "Sampad Swain", image: "https://masai-website-images.s3.ap-south-1.amazonaws.com/Sampad_swain_Instamojo_f12bf6341e.jpg",profasion:"Founder & CEO", companylogo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"}
+];
+
+    investor.map(function (ele) {
+    var box=document.createElement("div");
+
+    var imag=document.createElement("img");
+    imag.setAttribute("id","img")
+    imag.src=ele.image
+
+    var name=document.createElement("h2")
+    name.textContent=ele.name
+
+    var pro=document.createElement("p");
+    pro.textContent=ele.profasion
+    pro.setAttribute("id","p")
+
+    var company=document.createElement("img");
+    company.src=ele.companylogo
+    company.setAttribute("id","com")
+    box.append(imag,name,pro,company)
+
+    document.querySelector("#container").append(box)
+
+    });
+    // var box=document.createElement("div");
+    // var imag=document.createElement("img")
+    // imag.src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg"
+    // box.append(imag)
+    // document.querySelector("#container").append(box);
+
+</script>

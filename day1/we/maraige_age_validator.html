@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="gender" id="gender">
+        <option value="">--</option>
+        <option value="male">male</option>
+        <option value="female">female</option>
+    </select>
+    <input type="number" placeholder="year of barth" id="age">
+    <button onclick="checkage()">check eligibility</button>
+    <p id="out">sho output</p>
+</body>
+</html>
+
+
+<script>
+function checkage(){
+    var age=2022-document.getElementById("age").value
+    console.log(age)
+    var gender=document.getElementById("gender").value
+    console.log(gender)
+
+    if(age>=18 && gender=="female"){
+        console.log("eligible");
+        document.getElementById("out").innerText="eligible"
+    }
+    else if(age<18 && gender=="female"){
+        console.log("not eligible")
+        document.getElementById("out").innerText="not eligible"
+    }
+    else if(age>=22 && gender=="male"){
+        document.getElementById("out").innerText="eligible"
+    }else if(age<22 && gender=="male"){
+        document.getElementById("out").innerText="not eligible"
+    }
+}
+</script>

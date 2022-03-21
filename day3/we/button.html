@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #container{
+           padding: 15px 20px 15px 20px;
+           margin-left: 10px;
+           border-radius: 10px;
+       }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+var buttonobj=[
+    {textcontent: "primary", colour: "white", bgcolour:"blue"},
+    {textcontent: "secondary", colour: "white", bgcolour:"gray"},
+    {textcontent: "denger", colour: "white", bgcolour:"red"},
+    {textcontent: "worning", colour: "white", bgcolour:"yellow"},
+    {textcontent: "Info", colour: "white", bgcolour:"cyan"},
+    {textcontent: "light", colour: "black", bgcolour:"white"},
+    {textcontent: "success", colour: "white", bgcolour:"green"},
+    {textcontent: "Dark", colour: "white", bgcolour:"black"},
+    {textcontent: "link", colour: "blue", bgcolour:"white"}
+];
+
+buttonobj.map(function (ele,index,arr){
+    // console.log(ele.textcontent)
+    var btn=document.createElement("button")
+    btn.textContent=ele.textcontent
+    btn.style.backgroundColor=ele.bgcolour
+    btn.style.color=ele.colour
+    btn.setAttribute("id","container")
+    
+    document.querySelector("body").append(btn)
+})
+    
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button >click me</button>
+</body>
+</html>
+<script>
+    // function myfunction(){
+    //     console.log("some one click")
+    // }
+    document.querySelector("button").addEventListener("click", myfunctioon)
+
+    function myfunctioon(){
+        console.log("some one click me")
+    }
+
+    document.querySelector("button").addEventListener("mouseenter", sourav)
+    function sourav(){
+        document.querySelector("button").style.backgroundColor = "teal";
+    }
+
+
+
+    document.querySelector("button").addEventListener("mouseleave", leave)
+    function leave(){
+        document.querySelector("button").style.backgroundColor="orrange"
+    }
+
+    document.querySelector("button").addEventListener("dblclick", double)
+    function double(){
+        document.querySelector("button").innerText="dont double click me"
+    }
+</script>
+

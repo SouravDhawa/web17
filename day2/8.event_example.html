@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display:flex
+        }
+        #container>div{
+            background-color: teal;
+            width: 150px;
+            height: 150px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>1</div>
+        <div>3</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+    </div>
+</body>
+</html>
+
+<script>
+var box=document.querySelectorAll("#container>div")
+console.log(box)
+
+
+for(i=0;i<box.length;i++){
+    box[i].addEventListener("click",myfunction)
+}
+function myfunction(){
+    console.log("click one of box")
+    console.log(event.target.innerText)
+}
+</script>

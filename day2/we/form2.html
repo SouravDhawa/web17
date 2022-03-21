@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form id="formtag">
+    <input type="text" id="name" placeholder="enter nmae">
+    <input type="number" id="age" placeholder="enter age">
+
+    <select name="" id="gender">
+        <option value="male">male</option>
+        <option value="female">female</option>
+    </select>
+    <input type="text" id="email" name="email" placeholder="enter email">
+    <input type="number" id="mobile" name="mobile">
+    <input type="submit" value="Login">
+   </form>
+
+</body>
+</html>
+
+<script>
+// points for using forms
+// 1. wrap every input using form tag
+//2. instead of taking button use input type =submit
+//3. add eventlistiner to form tag
+//4. event name should be submit
+
+document.querySelector("#formtag").addEventListener("submit",myfunction)
+
+function myfunction(){
+ event.preventDefault();
+    var name=document.querySelector("#name").value
+    var age=document.querySelector("#age").value
+    var gender=document.querySelector("#gender").value
+    var mail=document.querySelector("#email").value
+    var mob=document.querySelector("#mobile").value
+    console.log(name,age,gender,mail,mob)
+}
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="num1" placeholder="enter number">
+    <input type="number" id="num2" placeholder="enter number">
+
+    <button id="mul">multiplication</button>
+    <button id="power">squar</button>
+    <p >show output</p>
+</body>
+</html>
+
+<script>
+    document.querySelector("#mul").addEventListener("click",multiply)
+function multiply(){
+    x=document.querySelector("#num1").value
+    y=document.querySelector("#num2").value
+    var mul=x*y;
+    alert(mul)
+    document.querySelector("p").innerText=mul
+}
+document.querySelector("#power").addEventListener("click",power)
+function power(){
+    x=document.querySelector("#num1").value
+    // console.log(x)
+    y=document.querySelector("#num2").value
+
+    mu=1;
+    for(i=1;i<=y;i++){
+        mu=mu*x
+    }
+    if(mu==1){
+        mu="";
+    }
+    console.log(mu)
+    alert(mu)
+    ans =document.querySelector("p");
+    ans.innerText=mu
+    
+}
+</script>
